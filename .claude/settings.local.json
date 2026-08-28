@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"c:\\\\Users\\\\Gebruiker\\\\CompVis Project\"; $out = \"$env:TEMP\\\\sec_test.txt\"; $p = Start-Process python -ArgumentList \"-u\",\"security.py\",\"--headless\" -PassThru -NoNewWindow -RedirectStandardOutput $out -RedirectStandardError \"$env:TEMP\\\\sec_err.txt\"; Start-Sleep -Seconds 30; Stop-Process -Id $p.Id -Force; Start-Sleep -Seconds 1; \"--- stdout ---\"; Get-Content $out; \"--- stderr ---\"; Get-Content \"$env:TEMP\\\\sec_err.txt\" | Select-Object -First 5)",
+      "PowerShell(cd \"c:\\\\Users\\\\Gebruiker\\\\CompVis Project\"; $out = \"$env:TEMP\\\\sec2.txt\"; $p = Start-Process python -ArgumentList \"-u\",\"security.py\",\"--headless\" -PassThru -NoNewWindow -RedirectStandardOutput $out -RedirectStandardError \"$env:TEMP\\\\sec2e.txt\"; Start-Sleep -Seconds 20; Stop-Process -Id $p.Id -Force; Start-Sleep -Seconds 1; \"--- stdout ---\"; Get-Content $out; \"--- stderr ---\"; Get-Content \"$env:TEMP\\\\sec2e.txt\" | Select-Object -First 8)"
+    ]
+  }
+}
